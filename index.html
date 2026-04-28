@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Vaz 2107: Highway Drift</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="garage-screen">
+        <h1 class="neon-text">07 GARAGE</h1>
+        <div class="custom-panel">
+            <button onclick="adjustPeredok()">Peredok Arttır</button>
+            <button onclick="startGame()">YOLA ÇIK</button>
+        </div>
+    </div>
+
+    <div id="game-ui" style="display: none;">
+        <div class="stats">
+            <div id="speedometer">0 KM/H</div>
+            <div id="rpm-meter">RPM: 800</div>
+            <div id="gear-indicator">Ötürmə: N</div>
+        </div>
+
+        <div id="mobile-controls">
+            <div class="steering">
+                <button id="btn-left">←</button>
+                <button id="btn-right">→</button>
+            </div>
+            <div class="transmission">
+                <div class="gears">
+                    <button onclick="setGear(1)">1</button>
+                    <button onclick="setGear(2)">2</button>
+                    <button onclick="setGear(3)">3</button>
+                </div>
+                <button id="btn-clutch">MUFTA</button>
+            </div>
+            <div class="pedals">
+                <button id="btn-gas">QAZ</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
 
